@@ -59,4 +59,18 @@ public class ColaEnlazada<T> {
         }
         return frente.dato;
     }
+
+	    // Muestra todos los elementos del frente al final, sin sacarlos
+    public void imprimirCola() {
+        Nodo<T> actual = frente; // empieza en el primero
+        System.out.print("[");
+        while (actual != null) {
+            System.out.print(actual.dato);
+            if (actual.siguiente != null) {
+                System.out.print(", ");
+            }
+            actual = actual.siguiente; // pasa al siguiente nodo
+        }
+        System.out.println("]");
+    }
 }

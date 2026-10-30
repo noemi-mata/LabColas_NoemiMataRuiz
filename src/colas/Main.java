@@ -95,5 +95,25 @@ public class Main {
         System.out.println(pq.poll()); // 10 (sale el más chico)
         System.out.println(pq.poll()); // 20
         System.out.println(pq.poll()); // 30
+
+
+        System.out.println("\n--- Parte 5: Refuerzo ---");
+        ColaEnlazada<Integer> numeros = new ColaEnlazada<>();
+        numeros.encolar(1);
+        numeros.encolar(2);
+        numeros.encolar(3);
+        numeros.encolar(4);
+        numeros.encolar(5);
+
+        // Ejercicio 1: imprimir sin destruir la cola
+        System.out.print("Cola original: ");
+        numeros.imprimirCola();
+        System.out.println("Tamaño después de imprimir: " + numeros.tamanio());
+
+        // Ejercicio 3: invertir con una pila
+        Refuerzo.invertir(numeros);
+        System.out.print("Cola invertida: ");
+        numeros.imprimirCola();
+	
 	} 
 } 
